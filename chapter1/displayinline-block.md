@@ -1,0 +1,4 @@
+兼容IE8下方法：\*display：inline;
+
+\*zoom:1;
+
