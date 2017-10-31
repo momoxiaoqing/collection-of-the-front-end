@@ -1,3 +1,8 @@
-# First Chapter
+# 兼容问题
 
-GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
+## display:inline-block
+
+兼容IE8下方法：\*display：inline;
+
+\*zoom:1;
+
