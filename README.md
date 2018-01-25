@@ -1,4 +1,4 @@
-## My Awesome Book1
+# 前端坑集
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+记录在前端开发过程中的一些坑，留以备用。
 
