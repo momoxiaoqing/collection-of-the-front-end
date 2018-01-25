@@ -1,10 +1,16 @@
+# axios
+
+
+
 ### 1、引入：
 
 $ npm install axios
 
 $ bower install axios
 
-&lt;script src="https://unpkg.com/axios/dist/axios.min.js"&gt;&lt;/script&gt;
+&lt;script src="[https://unpkg.com/axios/dist/axios.min.js"&gt;&lt;/script&gt](https://unpkg.com/axios/dist/axios.min.js"></script&gt);
+
+
 
 ### 2、单个请求：
 
@@ -53,6 +59,8 @@ var instance = axios.create({
 });
 instance.defaults.headers={ token:getCookie('token')}
 ```
+
+### 
 
 ### 4、参考资料：[https://www.npmjs.com/package/axios](https://www.npmjs.com/package/axios)
 
