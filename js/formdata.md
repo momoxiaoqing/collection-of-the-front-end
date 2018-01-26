@@ -48,8 +48,6 @@ FormData.values()
 </div>
 ```
 
-
-
 ```js
 var target=document.getElementById('img-form');
 var data = new FormData(target);
@@ -66,6 +64,12 @@ axios.post('/attach/upload',data).then(function (res1) {
     }
 });
 ```
+
+### 6、参考
+
+[https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using\_FormData\_Objects](https://developer.mozilla.org/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)
+
+[https://developer.mozilla.org/en-US/docs/Web/API/FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData)
 
 
 
