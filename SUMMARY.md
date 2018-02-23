@@ -11,6 +11,5 @@
 * [node](node.md)
   * [error info](node/error-info.md)
   * [sequelize](node/sequelize.md)
-
-
+* [vue](vue.md)
 
