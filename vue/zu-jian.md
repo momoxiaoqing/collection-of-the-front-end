@@ -2,13 +2,20 @@
 
 parent：
 
-```js
+```
 <template>
  <!-- <dynamics-list></dynamics-list>-->
   <div>
     <div v-for="(item,index) in dynamicsList" :key="index">
       <div v-if="item.publish_time">
+       <!-- 以下表示把一个对象的所有属性作为 prop 进行传递-->
        <!-- <article-item v-bind="item" ></article-item>-->
+       <!-- 等价于：-->
+       <!-- <article-item :id="item.id" 
+                          :title="item.title" 
+                          :summary="item.summary" 
+                          :publish_time="item.publish_time" ></article-item>-->
+       
         <article-item :item="item" ></article-item>
       </div>
       <div v-else>
@@ -18,7 +25,6 @@ parent：
   </div>
 </template>
 <script>
-// import dynamicsList from '../components/DynamicsList'
 import articleItem from '../components/base/Article'
 import dlogItem from '../components/base/Dlog'
 export default {
@@ -49,6 +55,32 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
+</style>
+```
+
+Article.vue:
+
+```js
+<template>
+  <div>
+    {{article.title}}
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'Article',
+    props: ['item'],
+    data () {
+      return {
+        article: this.item
+      }
+    }
+  }
+</script>
+
 <style scoped>
 
 </style>
