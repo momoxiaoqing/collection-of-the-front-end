@@ -12,4 +12,5 @@
   * [error info](node/error-info.md)
   * [sequelize](node/sequelize.md)
 * [vue](vue.md)
+  * [组件](vue/zu-jian.md)
 
