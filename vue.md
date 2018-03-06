@@ -42,5 +42,18 @@ assets和static文件夹中图片均可放：
 </script>
 ```
 
+区别：assets在build时会被打包，而static不会
+
+
+
+### 取消mySwiper未被使用的报错
+
+添加注释：
+
+```js
+/* eslint-disable no-unused-vars */
+let test = 1
+```
+
 
 
