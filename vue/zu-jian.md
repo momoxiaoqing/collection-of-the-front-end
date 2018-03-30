@@ -86,8 +86,6 @@ Article.vue:
 </style>
 ```
 
-
-
 ### prop传递的对象修改
 
 1、data定义局部变量，其值为prop，不是引用复制
