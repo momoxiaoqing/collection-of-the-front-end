@@ -15,7 +15,7 @@ parent：
                           :title="item.title" 
                           :summary="item.summary" 
                           :publish_time="item.publish_time" ></article-item>-->
-       
+
         <article-item :item="item" ></article-item>
       </div>
       <div v-else>
@@ -84,7 +84,32 @@ Article.vue:
 <style scoped>
 
 </style>
+```
 
+
+
+### prop传递的对象修改
+
+1、data定义局部变量，其值为prop，不是引用复制
+
+```js
+props: ['initialCounter'],
+data: function () {
+  return { counter: this.initialCounter }   //counter不会随着initialCounter 的变化而变化
+}
+```
+
+2、computed返回prop，是引用复制，但当size.test初始值为undefined时，就不会被监听，即normalizedSize不会随着size.test
+
+的变化而变化
+
+```
+props: ['size'],
+computed: {
+  normalizedSize: function () {
+    return this.size.test
+  }
+}
 ```
 
 
