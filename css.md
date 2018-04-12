@@ -2,9 +2,9 @@
 
 ### img浏览器解析时会在图片底部加上3px,即img父元素莫名多了3px,解决方法：
 
-1、vertical-align: middle;
+`1、vertical-align: middle;`
 
-2、display：block;
+`2、display：block;`
 
 ### writing-mode: vertical-lr微信PC端内置浏览器无效，除规定width外，暂无解决方法
 
