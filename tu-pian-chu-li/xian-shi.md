@@ -1,3 +1,11 @@
+* ### 图片src加载3种方式
+
+1、url
+
+2、
+
+
+
 * ### img浏览器解析时会在图片底部加上3px,即img父元素莫名多了3px,解决方法：
 
 `1、vertical-align: middle;`
