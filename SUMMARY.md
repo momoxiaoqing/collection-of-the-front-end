@@ -18,4 +18,5 @@
 * [图片](tu-pian-chu-li.md)
   * [显示](tu-pian-chu-li/xian-shi.md)
   * [FormData](tu-pian-chu-li/formdata.md)
+* [规范](gui-fan.md)
 
