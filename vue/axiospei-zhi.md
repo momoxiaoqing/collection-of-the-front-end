@@ -104,17 +104,20 @@ axios.interceptors.response.use(
 )
 
 export default axios
-
 ```
-
-
 
 ### main.js
 
-```
+```js
 import axios from './api/axios.config'
-Vue.prototype.axios = axios
 
+Vue.prototype.axios = axios
+```
+
+### 应用 
+
+```
+this.axios.post()
 ```
 
 
