@@ -1,9 +1,15 @@
-### eslintrc规范中去掉缩进
+### eslintrc规范中
 
 在.eslintrc.js的rules中加入：
 
 ```
-'indent': 'off'
+'indent': 'off'//缩进
+
+// 注释
+'beforeBlockComment': true,
+'beforeLineComment': true
+
+
 ```
 
 ### vue组件加载图片：
@@ -62,8 +68,6 @@ let test = 1
 ```
 "vue-preview": "https://github.com/momoxiaoqing/vue-preview.git"
 ```
-
-
 
 ### 
 
