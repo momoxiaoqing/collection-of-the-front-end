@@ -8,8 +8,6 @@
 // 注释
 'beforeBlockComment': true,
 'beforeLineComment': true
-
-
 ```
 
 ### vue组件加载图片：
@@ -61,12 +59,20 @@ assets和static文件夹中图片均可放：
 let test = 1
 ```
 
+### v-show
+
+w-show不支持&lt;template&gt;
+
+### 
+
 ### 修改插件
 
 建议先fork插件，再将其替换成修改好的文件，运行npm install [https://github.com/momoxiaoqing/vue-preview.git](https://github.com/momoxiaoqing/vue-preview.git) -s，或直接修改json文件，再npm install
 
 ```
 "vue-preview": "https://github.com/momoxiaoqing/vue-preview.git"
+
+
 ```
 
 ### 

@@ -14,6 +14,7 @@
   * [vue2-better-scroll](vue/vue2-better-scroll.md)
   * [axios配置](vue/axiospei-zhi.md)
   * [tinymce富文本](vue/tinymcefu-wen-ben.md)
+  * route
 * [库/插件](5e93-cha-jian.md)
   * [swiper](5e93-cha-jian/swiper.md)
   * [axiox](5e93-cha-jian/axiox.md)
