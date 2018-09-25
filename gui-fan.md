@@ -41,7 +41,7 @@ my-file.min.css
   </head>
   <body>
     <!-- body goes here -->
- 
+
     <script src="main.js" async></script>
   </body>
 </html>
@@ -78,7 +78,7 @@ my-file.min.css
 ```
 (function($, w, d){
   'use strict';
- 
+
   $(function() {
     w.alert(d.querySelectorAll('div').length);
   });
@@ -167,11 +167,11 @@ URI值（url\(\)）不要使用引号。
 
 ```
 @import url(//cdn.com/foundation.css);
- 
+
 html {
   font-family: "open sans", arial, sans-serif;
 }
- 
+
 body:after {
   content: "pause";
 }

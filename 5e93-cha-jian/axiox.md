@@ -6,7 +6,7 @@ $ npm install axios
 
 $ bower install axios
 
-&lt;script src="\[[https://unpkg.com/axios/dist/axios.min.js"&gt;&lt;/script&gt\]\(https://unpkg.com/axios/dist/axios.min.js"&gt;](https://unpkg.com/axios/dist/axios.min.js"></script&gt]%28https://unpkg.com/axios/dist/axios.min.js">)&lt;/script&gt;\);
+&lt;script src="\[\[[https://unpkg.com/axios/dist/axios.min.js"&gt;&lt;/script&gt\]\(https://unpkg.com/axios/dist/axios.min.js"&gt;\]\(https://unpkg.com/axios/dist/axios.min.js"&gt;](https://unpkg.com/axios/dist/axios.min.js"></script&gt]%28https://unpkg.com/axios/dist/axios.min.js">]%28https://unpkg.com/axios/dist/axios.min.js">)[/script&gt\]%28https://unpkg.com/axios/dist/axios.min.js"](/script&gt]%28https://unpkg.com/axios/dist/axios.min.js")\)&lt;/script&gt;\);
 
 ### 2、单个请求：
 
