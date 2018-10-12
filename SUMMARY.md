@@ -24,4 +24,5 @@
 * [规范](gui-fan.md)
 * [react](react.md)
   * [组件](react/zu-jian.md)
+  * 生命周期
 
