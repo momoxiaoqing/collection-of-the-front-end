@@ -28,5 +28,5 @@ this.setState((prevState, props) => ({
 }));
 ```
 
-
+3、状态更新将自动合并
 
