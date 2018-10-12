@@ -28,5 +28,5 @@ this.setState((prevState, props) => ({
 }));
 ```
 
-3、状态更新将自动合并
+3、状态更新将自动合并，即state只需更新要更新的那一项就可以
 
