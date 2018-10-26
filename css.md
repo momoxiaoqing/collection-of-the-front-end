@@ -18,13 +18,11 @@
 
 ### 5、input outline
 
-### 6、强制不换行：
+### 6、文字强制不换行：
 
 ```
 white-space:nowrap;
 ```
-
-
 
 
 
