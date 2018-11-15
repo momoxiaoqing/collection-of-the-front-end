@@ -19,6 +19,7 @@
 * [库/插件](5e93-cha-jian.md)
   * [swiper](5e93-cha-jian/swiper.md)
   * [axiox](5e93-cha-jian/axiox.md)
+  * [charts](5e93-cha-jian/charts.md)
 * [图片](tu-pian-chu-li.md)
   * [显示](tu-pian-chu-li/xian-shi.md)
   * [FormData](tu-pian-chu-li/formdata.md)
