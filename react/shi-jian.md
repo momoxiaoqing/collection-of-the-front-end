@@ -17,7 +17,15 @@ function handleClick(e) {
   }
 ```
 
-4、类的方法默认是不会绑定 this 的，需要绑定
+4、类的方法默认是不会绑定 this 的，需要绑定。
+
+建议：
+
+在构造函数中绑定
+
+使用属性初始化器语法
+
+
 
 5、事件中有无\(\)区别：
 
@@ -79,6 +87,7 @@ function handleClick(e) {
                 <div>
                     <div>{this.state.count}</div>
                     <div><button onClick={this.add}>add</button></div>
+                    //<div><button onClick={(e)=>this.add(e)}>add</button></div> //无须绑定
                     //<div><button onClick={this.add()}>add</button></div>  //不管是否绑定add方法，count会随date变化
                     <div>
                         <h1>Hello world !</h1>
@@ -98,19 +107,6 @@ function handleClick(e) {
 
 
 </script>
-<!--
-  Note: this page is a great way to try React but it's not suitable for production.
-  It slowly compiles JSX with Babel in the browser and uses a large development build of React.
-
-  Read this section for a production-ready setup with JSX:
-  https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project
-
-  In a larger project, you can use an integrated toolchain that includes JSX instead:
-  https://reactjs.org/docs/create-a-new-react-app.html
-
-  You can also use React without JSX, in which case you can remove Babel:
-  https://reactjs.org/docs/react-without-jsx.html
--->
 </body>
 </html>
 ```
