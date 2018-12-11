@@ -28,4 +28,5 @@
 * [react](react.md)
   * [组件](react/zu-jian.md)
   * 生命周期
+  * [事件](react/shi-jian.md)
 
