@@ -27,6 +27,6 @@
 * [规范](gui-fan.md)
 * [react](react.md)
   * [组件](react/zu-jian.md)
-  * 生命周期
+  * [生命周期](react/sheng-ming-zhou-qi.md)
   * [事件](react/shi-jian.md)
 
