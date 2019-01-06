@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6cb2a78a-c996-4596-a1a5-25c5c6831f80" name="Default" comment="" />
+    <list default="true" id="6cb2a78a-c996-4596-a1a5-25c5c6831f80" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/css/tablede-border-wen-ti.md" afterPath="$PROJECT_DIR$/css/tablede-border-wen-ti.md" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +17,8 @@
         <entry file="file://$PROJECT_DIR$/css/tablede-border-wen-ti.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="21" lean-forward="true" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+              <first_editor relative-caret-position="76">
+                <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -59,7 +61,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1696" />
@@ -129,15 +131,15 @@
       <option name="presentableId" value="Default" />
       <updated>1546758446451</updated>
       <workItem from="1546758447521" duration="9000" />
-      <workItem from="1546758468437" duration="123000" />
+      <workItem from="1546758468437" duration="140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132000" />
+    <option name="totallyTimeSpent" value="149000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24969843" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -186,8 +188,8 @@
     <entry file="file://$PROJECT_DIR$/css/tablede-border-wen-ti.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="21" lean-forward="true" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <first_editor relative-caret-position="76">
+            <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
             <folding />
           </first_editor>
           <second_editor>

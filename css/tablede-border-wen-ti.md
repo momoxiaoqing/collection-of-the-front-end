@@ -1,4 +1,4 @@
-### table的border问题123
+### table的border问题12345
 
 * border-width不同时，较大者边框样式将被渲染；
 
