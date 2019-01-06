@@ -10,12 +10,21 @@
 * [formaData](/box-model.md)
 * [js运行机制](/box-model.md)
 
-### node1
 ### 图片处理
+
+
+### node
+
+### 插件
+* axios
+* charts
+* swiper
 
 ### 框架
 
 * [vue](/vue.md)
+* [react](/react.md)
+* [node](/node)
 
 
 
