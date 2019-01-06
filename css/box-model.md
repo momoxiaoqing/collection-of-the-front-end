@@ -1,6 +1,6 @@
 ### 盒子模型
 
-* 1、
+#### 1、W3C标准盒模型 VS 怪异盒模型（IE 盒模型）
 ```
  <div class="content">content-model</div>
   .content{
@@ -12,11 +12,22 @@
              margin: 10px;
          }
 ```
-标准盒模型（Chrome、IE9）显示：
+W3C标准盒模型（Chrome、IE9及以上）显示：
+
 ![](/assets/box.png)
 
+怪异盒模型（IE 盒模型、IE8及以下）：
 
-2、jquery的width() VS css('width',**)方法
+![](/assets/box-ie.png)
+
+#### 2、box-sizing设置盒子模型
+```
+content-box // 怪异盒模型  total width: 100+(10+10)*2=140px
+border-box //  W3C标准盒模型 total width:100px
+```
+
+
+#### 3、jquery的width() VS css('width',**)方法
 
 * width()指向content宽度；
   css('width',**)指向 content + padding + border

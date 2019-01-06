@@ -24,5 +24,8 @@
 white-space:nowrap;
 ```
 
-
-
+### 适用所有css属性
+```
+initial  // 将属性的初始值( initial value)赋给元素
+```
+[属性的初始值查看](https://www.w3.org/TR/CSS2/propidx.html)
