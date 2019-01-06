@@ -17,11 +17,6 @@
 * [显示](/tu-pian-chu-li/xian-shi.md)
 * [FormData](/tu-pian-chu-li/formdata.md)
 
-### node
-
-* 
-
-
 ### 插件
 
 * [axiox](/5e93-cha-jian/axiox.md)
@@ -32,11 +27,14 @@
 
 * [vue](/vue.md)
 
-       [error info](/node/error-info.md)
+  ```
+   [error info](/node/error-info.md)
 
-        [sequelize](/node/sequelize.md)
+    [sequelize](/node/sequelize.md)
+  ```
 
 * [react](/react.md)
+
 * [node](/node)
 
 
