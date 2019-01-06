@@ -1,6 +1,6 @@
 ### 盒子模型
 
-1、
+* 1、
 ```
  <div class="content">content-model</div>
   .content{
