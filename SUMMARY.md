@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [css](css.md)
+  * [盒子模型](css/box-model.md)
   * [table的border问题](css/tablede-border-wen-ti.md)
 * [兼容问题](chapter1.md)
 * [js](js.md)
