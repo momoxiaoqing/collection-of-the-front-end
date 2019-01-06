@@ -13,7 +13,7 @@
          }
 ```
 标准盒模型（Chrome、IE9）显示：
-![](/assets/border-style.png)
+![](/assets/box.png)
 
 
 2、jquery的width() VS css('width',**)方法
