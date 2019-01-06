@@ -26,6 +26,9 @@ white-space:nowrap;
 
 ### 适用所有css属性
 ```
-initial  // 将属性的初始值( initial value)赋给元素
+initial  // 属性的初始值
+inherit  // 父元素属性的值
+unset //属性克继承，则父元素属性的值；否则，初始值
 ```
+
 [属性的初始值查看](https://www.w3.org/TR/CSS2/propidx.html)

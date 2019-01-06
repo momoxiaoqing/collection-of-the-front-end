@@ -27,14 +27,13 @@
 
 * [vue](/vue.md)
 
-
-   * [error info](/node/error-info.md)
-
-    * [sequelize](/node/sequelize.md)
-
 * [react](/react.md)
 
 * [node](/node)
+
+     * [error info](/node/error-info.md)
+
+     * [sequelize](/node/sequelize.md)
 
 
 
