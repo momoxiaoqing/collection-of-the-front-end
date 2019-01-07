@@ -19,6 +19,7 @@
   * [route](vue/route.md)
   * [部署](vue/bu-shu.md)
 * [库/插件](5e93-cha-jian.md)
+  * [swiper](5e93-cha-jian/jQuery.md)
   * [swiper](5e93-cha-jian/swiper.md)
   * [axiox](5e93-cha-jian/axiox.md)
   * [charts](5e93-cha-jian/charts.md)
