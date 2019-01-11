@@ -29,7 +29,10 @@ border-box //  W3C标准盒模型 total width:100px
 
 #### 3、jquery的width() VS css('width',**)方法
 
-* width()指向content宽度；
+* 在 box-sizing: border-box;下：
+
+  width()指向content宽度；
+
   css('width',**)指向 content + padding + border
 * 上一条和浏览器兼容性无关，IE9和IE6一致
 
