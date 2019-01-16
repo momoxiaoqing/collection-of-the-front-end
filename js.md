@@ -4,7 +4,7 @@
 
 
 
-### 点击事件触发两次
+### 点击事件触发两次(冒泡事件)
 
 ```
  <label class="radio " style="margin-left: 88px;">
