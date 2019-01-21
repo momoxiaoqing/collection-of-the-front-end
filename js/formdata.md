@@ -56,6 +56,7 @@ FormData.values()
 </div>
 ```
 
+vue:
 ```js
 var target=document.getElementById('img-form');
 var data = new FormData(target);
@@ -71,6 +72,37 @@ axios.post('/attach/upload',data).then(function (res1) {
         layer.msg(res1.data.message)
     }
 });
+```
+
+jquery:
+contentType和processData必须设置false
+```
+ <form id="img-form" enctype="multipart/form-data">
+       <input type="file" id="upload" name="file">
+ </form>
+
+var form=document.getElementById('img-form');
+     var formData = new FormData(form);
+     $.ajax({
+         type: 'post',
+         url: GLOBAL.supplyBaseUrl + '/file',
+         dataType: 'json',
+         contentType: false, //必填  not set any content type header (requires jQuery 1.6+)
+         processData: false, //必填 send a DOMDocument, or other non-processed data
+         data: formData,
+         beforeSend: function (request) {
+             var token = localStorage.getItem('token') || "";
+             request.setRequestHeader("access-token", token);
+         }
+     }).then(function (res) {
+         if (res.success) {
+             debugger
+         } else {
+             layer.msg(res.error.message);
+         }
+     }, function (err) {
+         layer.msg("网络连接失败，请重新加载！")
+     });
 ```
 
 ### 
