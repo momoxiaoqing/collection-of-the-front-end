@@ -17,3 +17,5 @@
 * nvm list available //查看可以安装的版本
 * nvm install v8.9.0  //安装
 * nvm use 8.9.0  //设置当前node版本
+* nvm uninstall 8.11.1  //删除指定版本
+* nvm -h
