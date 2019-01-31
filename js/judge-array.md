@@ -1,7 +1,8 @@
 ### 判断是否数组方法
 
-1、[instanceof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) 判断是否数组
- 无兼容性，ie7亲测可用
+1、[instanceof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
+判断是否数组
+
  ```
  var arr = [];
  arr instanceof Array; // true
@@ -11,7 +12,7 @@
  ```
 
 2、原型链方法 [constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
- 无兼容性
+
 ```
 var ary = [1,23,4];
 ary.__proto__.constructor==Array //true 和下行不同写法
@@ -24,7 +25,7 @@ o.constructor==Array  //false
 ```
 
 3、[Object.prototype.toString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)
- 无兼容性，ie7亲测可用
+
 ```
 Object.prototype.toString.call([]) === '[object Array]' // true
 
