@@ -29,8 +29,6 @@ build:{
 
 vue/cli 3没有这个问题，已无config中已无build，无需修改
 
-
-
 ### Vue CLI 3版本
 
 因为在route中默认：

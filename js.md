@@ -4,7 +4,13 @@
 
 
 
-### 点击事件触发两次(冒泡事件)
+### 变量提升
+
+JavaScript 仅提升声明，而不提升初始化
+
+
+
+### 点击事件触发两次\(冒泡事件\)
 
 ```
  <label class="radio " style="margin-left: 88px;">
