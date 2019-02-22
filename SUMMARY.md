@@ -10,6 +10,7 @@
   * [深拷贝&浅拷贝](js/shen-kao-8d1d26-qian-kao-bei.md)
   * [节流](js/jieliu.md)
   * [判断是否数组](js/judge-array.md)
+  * [DOM](js/dom.md)
 * [node](node.md)
   * [error info](node/error-info.md)
   * [sequelize](node/sequelize.md)
