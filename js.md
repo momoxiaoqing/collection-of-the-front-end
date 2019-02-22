@@ -11,20 +11,19 @@
 ```
 /* 函数声明式 */
 (function(){
-	fn();
-	function fn() {
-		console.log('来自函数声明式fn');
-	}
+    fn();
+    function fn() {
+        console.log('来自函数声明式fn');
+    }
 })();
 
 /* 函数表达式 */
 (function(){
-	fn();
-	var fn = function() {
-		console.log('来自函数表达式fn');
-	}
+    fn();
+    var fn = function() {
+        console.log('来自函数表达式fn');
+    }
 })();
-
 ```
 
 输出：
