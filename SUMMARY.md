@@ -11,6 +11,7 @@
   * [节流](js/jieliu.md)
   * [判断是否数组](js/judge-array.md)
   * [DOM](js/dom.md)
+  * [闭包](js/bi-bao.md)
 * [node](node.md)
   * [error info](node/error-info.md)
   * [sequelize](node/sequelize.md)
