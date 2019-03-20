@@ -32,11 +32,13 @@
 * 外边距折叠只会发生在属于同一BFC的块级元素之间
 * 阻止元素被浮动元素覆盖，应用：实现两列自适应布局，左边的宽度固定，右边的内容自适应宽度
 ```
-<div style="height: 100px;width: 100px;float: left;background: lightblue">
-    我是一个左浮动的元素
+<div style="overflow: auto">
+    <div style="height: 100px;width: 100px;float: left;background: lightblue">
+        我是一个左浮动的元素
+    </div>
+    <div style=" height: 80px;background: #eee;overflow: auto">
+        我是一个没有设置浮动, 也没有触发 BFC 元素, width: 200px; height:200px; background: #eee;
+    </div>
 </div>
-<div style="width: 200px; height: 200px;background: #eee">
-   我是一个没有设置浮动, 也没有触发 BFC 元素, width: 200px; height:200px; background: #eee;
- </div>
 ```
 
