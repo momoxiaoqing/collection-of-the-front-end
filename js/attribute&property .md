@@ -9,3 +9,4 @@ property： 由html转化的Dom 的成员
 
 例：对于 Dom 对象，dom.checked 的值始终是布尔类型的，dom.value 的值始终是相应 input 元素的当前值，并非是 HTML 中 input 元素的 value 特性的值，dom.defaultValue 则是 HTML 中 input 元素的 value 特性的值；
 
+
