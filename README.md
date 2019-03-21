@@ -5,12 +5,28 @@
 ### css
 
 * [盒子模型](/box-model.md)
+* [BFC](/css/BFC.md)
 * [table的border问题](/css/tablede-border-wen-ti.md)
 
 ### js
 
-* [深拷贝&浅拷贝](/js/shen-kao-8d1d26-qian-kao-bei.md)
 * [js运行机制](/js/jsyun-xing-ji-zhi.md)
+
+* [深拷贝&浅拷贝](/js/shen-kao-8d1d26-qian-kao-bei.md)
+
+* [attribute&property](/js/attribute&property.md)
+
+* [判断是否数组](/js/judge-array.md)
+
+* [DOM](/js/dom.md)
+
+* [闭包](/js/bi-bao.md)
+
+* [apply&call&bind](/js/apply&call.md)
+
+* [函数节流&防抖](/js/jieliu.md)
+
+* [正则](/js/zheng-ze.md)
 
 ### 图片处理
 
@@ -27,13 +43,15 @@
 
 * [vue](/vue.md)
 
+             ss
+
 * [react](/react.md)
 
 * [node](/node)
 
-     * [error info](/node/error-info.md)
+  * [error info](/node/error-info.md)
 
-     * [sequelize](/node/sequelize.md)
+  * [sequelize](/node/sequelize.md)
 
 
 

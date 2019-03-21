@@ -13,7 +13,7 @@
   * [判断是否数组](js/judge-array.md)
   * [DOM](js/dom.md)
   * [闭包](js/bi-bao.md)
-  * [apply&call](js/apply&call.md)
+  * [apply&call&bind](js/apply&call.md)
   * [函数节流&防抖](js/jieliu.md)
   * [正则](js/zheng-ze.md)
 * [node](node.md)
