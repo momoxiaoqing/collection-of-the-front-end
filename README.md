@@ -43,7 +43,7 @@
 
 * [vue](/vue.md)
 
-         生命周期
+  生命周期 
 
 * [react](/react.md)
 
