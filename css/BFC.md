@@ -42,3 +42,31 @@
 </div>
 ```
 
+### IFC
+内联格式化上下文（Inline Formatting Contexts）
+
+应用：
+
+水平居中：当一个块要在环境中水平居中时，设置其为inline-block则会在外层产生IFC，通过text-align则可以使其水平居中。
+
+垂直居中：创建一个IFC，用其中一个元素撑开父元素的高度，然后设置其vertical-align:middle，其他行内元素则可以在此父元素下垂直居中。
+
+
+### GFC
+网格布局格式化上下文（GridLayout Formatting Contexts）
+
+display:grid
+
+
+
+### FFC
+自适应格式化上下文（Flex Formatting Contexts）
+
+display:flex
+
+
+### 兼容性
+* BFC： css2
+* IFC：css2
+* GFC：css3，IE10+
+* FFC：css3，IE10+
