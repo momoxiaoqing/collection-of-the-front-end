@@ -4,24 +4,30 @@
 判断是否数组
 
  ```
- var arr = [];
- arr instanceof Array; // true
+     var arr = [];
+     arr instanceof Array; // true
 
- var o = {};
- o instanceof Array; // false
+     var o = {};
+     o instanceof Array; // false
  ```
 
-2、原型链方法 [constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
+2、原型链方法 [constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)|| isPrototypeOf()
 
+constructor方法：
 ```
-var ary = [1,23,4];
-ary.__proto__.constructor==Array //true 和下行不同写法
-ary.constructor==Array //true
-ary.constructor==Object //false
+    var ary = [1,23,4];
+    ary.__proto__.constructor==Array //true 和下行不同写法
+    ary.constructor==Array //true
+    ary.constructor==Object //false
 
-var o={};
-o.constructor==Object//true
-o.constructor==Array  //false
+    var o={};
+    o.constructor==Object//true
+    o.constructor==Array  //false
+```
+isPrototypeOf()方法：检测是否原型
+```
+   Array.prototype.isPrototypeOf(array) //true
+   Array.prototype.isPrototypeOf(object) //false
 ```
 
 3、[Object.prototype.toString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)
@@ -34,6 +40,7 @@ Object.prototype.toString.call(123) === '[object Number]';
 Object.prototype.toString.call('abc')) === '[object String]';
 Object.prototype.toString.call(undefined) === '[object Undefined]';
 Object.prototype.toString.call(true) === '[object Boolean]';
+Object.prototype.toString.call({}) === '[object Object]';
 Object.prototype.toString.call(function(){}) === '[object Function]';
 Object.prototype.toString.call(new RegExp()) === '[object RegExp]';
 Object.prototype.toString.call(null) === '[object Null]';

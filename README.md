@@ -4,7 +4,7 @@
 
 ### css
 
-* [盒子模型](/box-model.md)
+* [盒子模型](/css/box-model.md)
 * [BFC](/css/BFC.md)
 * [table的border问题](/css/tablede-border-wen-ti.md)
 
