@@ -16,6 +16,7 @@
   * [apply&call&bind](js/apply&call.md)
   * [函数节流&防抖](js/jieliu.md)
   * [正则](js/zheng-ze.md)
+  * [箭头函数](js/arrow-function.md)
 * [node](node.md)
   * [nvm-windows](node/nvm-windows.md)
   * [npm](node/npm.md)

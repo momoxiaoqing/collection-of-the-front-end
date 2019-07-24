@@ -28,6 +28,8 @@
 
 * [正则](/js/zheng-ze.md)
 
+* [箭头函数](js/arrow-function.md)
+
 ### 图片处理
 
 * [显示](/tu-pian-chu-li/xian-shi.md)
