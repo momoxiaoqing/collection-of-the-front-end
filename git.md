@@ -1,0 +1,13 @@
+### git 常用操作
+
+#### 查看地址
+`git remote -v`
+
+#### 删除已追踪文件
+删除.idea文件
+`git rm -r --cached .idea/ `
+
+#### reset操作
+* soft：已add缓存不变，回退commit信息，本地文件不变
+* mixed：已add缓存丢失，回退commit和index信息，本地文件不变
+* hard：彻底回退，本地文件不保留修改，但是未add的文件不变
