@@ -51,7 +51,11 @@ $("label").click(function (e) {
 });
 ```
 
-### 
+### 关于数组
+Array方法：
+* fill
+* fill
 
+[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 
