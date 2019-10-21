@@ -54,6 +54,26 @@
    }
 ```
 
+#### 相邻行内元素文字竖直居中问题
+行内元素的vertical-align属性会影响父元素的基线
+```
+<div class="parent-div2">
+    <span>child 1</span>
+    <span>
+        <div class="big">big</div>
+        <div class="small">child 2</div>
+    </span>
+</div>
+
+ .parent-div2>span{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .big{
+            font-size: 36px;
+        }
+```
+
 
 
 #### 参考
