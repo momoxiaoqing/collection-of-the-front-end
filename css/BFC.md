@@ -70,3 +70,34 @@ display:flex
 * IFC：css2
 * GFC：css3，IE10+
 * FFC：css3，IE10+
+
+
+### position && overflow:hidden
+记住这个：position: absolute元素溢出overflow: hidden元素的时候，如果其第一个含有position属性(static除外)的祖先元素（一直到body）是overflow: hidden元素祖先元素的时候，则不隐藏；否则，隐藏。
+
+或者记住这个：火星人在地球触发了法律，如果火星人的老爸在这法律之外，则这个火星人啥事没有；否则，坐牢！
+
+```
+body
+    height: 0; overflow: hidden;
+        position: absolute; /* 不会被隐藏 */
+```
+
+```
+position: relative;
+    height: 0; overflow: hidden;
+        position: absolute; /* 不会被隐藏 */
+```
+
+```
+height: 0; overflow: hidden;  position: relative;
+    position: absolute; /* 会被隐藏 */
+```
+
+```
+height: 0; overflow: hidden;
+    position: relative;
+        position: absolute; /* 会被隐藏 */
+```
+
+[您可能不知道的CSS元素隐藏“失效”以其妙用 张鑫旭](https://www.zhangxinxu.com/wordpress/2012/02/css-overflow-hidden-visibility-hidden-disabled-use/)

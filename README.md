@@ -11,23 +11,14 @@
 ### js
 
 * [js运行机制](/js/jsyun-xing-ji-zhi.md)
-
 * [深拷贝&浅拷贝](/js/shen-kao-8d1d26-qian-kao-bei.md)
-
 * [attribute&property](/js/attribute&property.md)
-
 * [判断是否数组](/js/judge-array.md)
-
 * [DOM](/js/dom.md)
-
 * [闭包](/js/bi-bao.md)
-
 * [apply&call&bind](/js/apply&call.md)
-
 * [函数节流&防抖](/js/jieliu.md)
-
 * [正则](/js/zheng-ze.md)
-
 * [箭头函数](js/arrow-function.md)
 
 ### 图片处理
@@ -40,6 +31,7 @@
 * [axiox](/5e93-cha-jian/axiox.md)
 * [charts](/5e93-cha-jian/charts.md)
 * [swiper](/5e93-cha-jian/swiper.md)
+* [xlsx&stream](5e93-cha-jian/xlsx.md)
 
 ### 框架
 
@@ -48,12 +40,9 @@
   生命周期 
 
 * [react](/react.md)
-
 * [node](/node)
-
-  * [error info](/node/error-info.md)
-
-  * [sequelize](/node/sequelize.md)
+* [error info](/node/error-info.md)
+* [sequelize](/node/sequelize.md)
 
 
 
