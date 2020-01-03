@@ -13,3 +13,13 @@ isNumber.exec('123')  // 返回被匹配到的值的数组
 
 
 
+### 常用
+* 获取html页面名称：/\/(\w+\-*\w*\-*\w*)\.html/.exec(href)
+```
+function getPageName (url) {
+    url=url||window.location.href;
+    var pageName=/\/(\w+\-*\w*\-*\w*)\.html/.exec(url);
+    return pageName!==null?pageName[pageName.length-1]:null
+}
+
+```

@@ -1,6 +1,6 @@
 ### eslintrc规范中
 
-在.eslintrc.js的rules中加入：
+1、在.eslintrc.js的rules中加入：
 
 ```
 'indent': 'off'//缩进
@@ -9,6 +9,9 @@
 'beforeBlockComment': true,
 'beforeLineComment': true
 ```
+
+2、记录
+* 忽略下行规范：/* eslint-disable no-unused-vars */
 
 ### vue组件加载图片：
 
@@ -61,7 +64,7 @@ let test = 1
 
 ### v-show
 
-w-show不支持&lt;template&gt;
+v-show不支持&lt;template&gt;
 
 ### 
 
@@ -75,7 +78,28 @@ w-show不支持&lt;template&gt;
 
 ```
 
-### 
+### 添加动态属性
+
+```
+ export default {
+        name: 'test',
+        data () {
+            return {
+                user: {}
+            }
+        },
+        methods: {
+            getUser () {
+                // 添加动态属性
+                this.user.userName='111' // Vue 无法探测普通的新增属性
+                this.user = {
+                    userName: '123'
+                } // 响应式属性
+                this.$set(this.user,'userName','123') // 响应式属性
+            }
+        }
+    }
+```
 
 
 
