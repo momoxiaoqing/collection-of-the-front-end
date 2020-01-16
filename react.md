@@ -2,7 +2,10 @@
 
 ![](/assets/832416858-5b077e7f0fcd7_articlex.png)
 
-### 二、state
+
+### 二、props 不可改
+
+### 三、state 私有 + 可变
 
 1、不要直接修改status
 

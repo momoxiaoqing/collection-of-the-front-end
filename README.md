@@ -19,7 +19,8 @@
 * [apply&call&bind](/js/apply&call.md)
 * [函数节流&防抖](/js/jieliu.md)
 * [正则](/js/zheng-ze.md)
-* [箭头函数](js/arrow-function.md)
+* [箭头函数](js/es6/arrow-function.md)
+* [super](js/es6/super.md)
 
 ### 图片处理
 
@@ -36,13 +37,15 @@
 ### 框架
 
 * [vue](/vue.md)
-
-  生命周期 
-
 * [react](/react.md)
 * [node](/node)
 * [error info](/node/error-info.md)
 * [sequelize](/node/sequelize.md)
+
+
+### 网络相关
+
+* [网络相关](network.md)
 
 
 
