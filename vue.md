@@ -78,7 +78,7 @@ v-show不支持&lt;template&gt;
 
 ```
 
-### 添加动态属性
+### 添加动态属性 $set
 
 ```
  export default {
