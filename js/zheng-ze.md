@@ -21,5 +21,7 @@ function getPageName (url) {
     var pageName=/\/(\w+\-*\w*\-*\w*)\.html/.exec(url);
     return pageName!==null?pageName[pageName.length-1]:null
 }
-
 ```
+
+
+
