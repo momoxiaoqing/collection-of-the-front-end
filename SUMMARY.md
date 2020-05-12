@@ -31,6 +31,7 @@
 * [vue](vue.md)
   * [生命周期](vue/sheng-ming-zhou-qi.md)
   * [组件](vue/zu-jian.md)
+  * [公共组件的加载](vue/zu-jian.md)
   * [混入](vue/mixins.md)
   * [vue2-better-scroll](vue/vue2-better-scroll.md)
   * [axios配置](vue/axiospei-zhi.md)
@@ -52,4 +53,5 @@
   * [生命周期](react/sheng-ming-zhou-qi.md)
   * [事件](react/shi-jian.md)
 * [网络相关](network.md)
+* [webstorm](/tools/webstorm.md)
 
