@@ -19,6 +19,7 @@
 * [正则](/js/zheng-ze.md)
 * [箭头函数](js/es6/arrow-function.md)
 * [super](js/es6/super.md)
+* [文件下载](js/file-download.md)
 
 ### [兼容问题](compatibility.md)
 
