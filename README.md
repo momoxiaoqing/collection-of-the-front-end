@@ -31,6 +31,7 @@
 * [FormData](/tu-pian-chu-li/formdata.md)
 
 ### [插件](plugins.md)
+* [bootstrap](/plugins/bootstrap.md)
 * [axiox](/plugins/axiox.md)
 * [charts](/plugins/charts.md)
 * [swiper](/plugins/swiper.md)
@@ -57,7 +58,9 @@
 * [网络相关](network.md)
 
 
-### 编辑器相关
+### 工具相关
 * [webstorm](/tools/webstorm.md)
+* [nginx](/tools/nginx.md)
+* [DNS](/tools/dns.md)
 
 

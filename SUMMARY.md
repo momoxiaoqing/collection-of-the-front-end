@@ -40,6 +40,7 @@
   * [route](vue/route.md)
   * [部署](vue/bu-shu.md)
 * [库/插件](plugins.md)
+  * [bootstrap](/plugins/bootstrap.md)
   * [swiper](plugins/jQuery.md)
   * [swiper](plugins/swiper.md)
   * [axiox](plugins/axiox.md)
@@ -54,5 +55,9 @@
   * [生命周期](react/sheng-ming-zhou-qi.md)
   * [事件](react/shi-jian.md)
 * [网络相关](network.md)
-* [webstorm](/tools/webstorm.md)
+* [工具相关](tools.md)
+  * [webstorm](/tools/webstorm.md)
+  * [nginx](/tools/nginx.md)
+  * [DNS](/tools/dns.md)
+
 

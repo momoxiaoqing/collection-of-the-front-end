@@ -1,10 +1,17 @@
 ### tinymce富文本
 tinymce-vue需购买tinymce的服务，所以直接下载tinymce
+```
+npm install tinymce
+npm install --save @tinymce/tinymce-vue
+```
 
 #### 引入静态文件
-* 将node_modules/tinymce/skins拷贝到public目录下
+* 将node_modules/tinymce/skins拷贝到public/tinymce目录下
+* base_url: '/tinymce',  //"tinymce": "^5.3.2"需要
 * 中文语言包 [下载地址](https://www.tiny.cloud/get-tiny/language-packages/)
-* 下载powerpaste，支持图片复制上传 [保留版本](/plugins/powerpaste)
+* 支持图片复制上传:下载powerpaste [保留版本](/plugins/powerpaste)
+* 首行缩进，加载插件indent2em，[地址](http://tinymce.ax-z.cn/more-plugins/indent2em.php),和其他类似，新建index.js ```require('./plugin.js');```,然后在配置项的plugins和toolbar添加‘indent2em’
+
 
 ![](/assets/tinymce.png)
 
@@ -86,7 +93,7 @@ const EDITOR_CONFIG = {
     // 自定义图片上传
     images_upload_handler: function (blobInfo, success, failure) {
         let formData = new FormData()
-        formData.append('file', blobInfo.blob())
+        formData.append('file', blobInfo.blob(),blobInfo.filename())
         uploadFileApi.add(formData).then((res) => {
                 success(res.data.url)
             }
@@ -163,4 +170,8 @@ export default {
           Wingdings=wingdings,zapf dingbats`,
 * */
 
+```
+
+```
+ <editor v-model="article.content" :init="editorInit"></editor>
 ```
