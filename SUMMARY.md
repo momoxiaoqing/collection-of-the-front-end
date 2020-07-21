@@ -41,7 +41,7 @@
   * [部署](vue/bu-shu.md)
 * [库/插件](plugins.md)
   * [bootstrap](/plugins/bootstrap.md)
-  * [swiper](plugins/jQuery.md)
+  * [jQuery](plugins/jQuery.md)
   * [swiper](plugins/swiper.md)
   * [axiox](plugins/axiox.md)
   * [charts](plugins/charts.md)

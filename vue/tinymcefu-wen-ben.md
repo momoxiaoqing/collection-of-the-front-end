@@ -40,12 +40,17 @@ npm install --save @tinymce/tinymce-vue
 * 支持图片复制上传:下载powerpaste [保留版本](/plugins/powerpaste)
 * 首行缩进，加载插件indent2em，[地址](http://tinymce.ax-z.cn/more-plugins/indent2em.php),和其他类似，新建index.js ```require('./plugin.js');```,然后在配置项的plugins和toolbar添加‘indent2em’
 * 多图片上传：
-  下载powerpaste [保留版本](/plugins/powerpaste)
+
+  下载powerpaste [保留版本](/plugins/powerpaste),新建index.js```require('./plugin.js');```
   
   修改plugin.js里的iframe1
   
+  powerpaste中的upfiles.html、loading.gif放在public文件夹下
+  
+  配置项的plugins和toolbar添加‘axupimgs’
+  
   images_upload_handler中blobInfo参数和单张图片上传会有所不一样 ```const name=typeof(blobInfo.filename)==='function'?blobInfo.filename():blobInfo.file.name```
-
+  
 ![](/assets/tinymce.png)
 
 #### 使用
@@ -132,7 +137,7 @@ const EDITOR_CONFIG = {
     ul,ol                     { list-style-position:inside; }
     `,
     images_upload_url: UPLOAD_URL, // 图片上传路径，不能删除，否则不能显示本地上传按钮
-    // 自定义多图片上传
+    // 自定义图片上传
    /* images_upload_handler: function (blobInfo, success, failure) {
         let formData = new FormData()
         // formData.append('file', blobInfo.blob())
