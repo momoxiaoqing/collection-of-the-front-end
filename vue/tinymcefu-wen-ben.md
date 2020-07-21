@@ -5,13 +5,46 @@ npm install tinymce
 npm install --save @tinymce/tinymce-vue
 ```
 
+#### [工具栏](http://tinymce.ax-z.cn/general/basic-setup.php#toolbarconfiguration)
+* newdocument（新文档）
+* bold（加粗）
+* italic（斜体）
+* underline（下划线）
+* strikethrough（删除线）
+* alignleft（左对齐）
+* aligncenter（居中对齐）
+* alignright（右对齐）
+* alignjustify（两端对齐）
+* styleselect（格式设置）
+* formatselect（段落格式）
+* fontselect（字体选择）
+* fontsizeselect（字号选择）
+* cut（剪切）
+* copy（复制）
+* paste（粘贴）
+* bullist（项目列表UL）
+* numlist（编号列表OL）
+* outdent（减少缩进）
+* indent（增加缩进）
+* blockquote（引用）
+* undo（撤销）
+* redo（重做/重复）
+* removeformat（清除格式）
+* subscript（下角标）
+* superscript（上角标）
+
 #### 引入静态文件
 * 将node_modules/tinymce/skins拷贝到public/tinymce目录下
 * base_url: '/tinymce',  //"tinymce": "^5.3.2"需要
 * 中文语言包 [下载地址](https://www.tiny.cloud/get-tiny/language-packages/)
 * 支持图片复制上传:下载powerpaste [保留版本](/plugins/powerpaste)
 * 首行缩进，加载插件indent2em，[地址](http://tinymce.ax-z.cn/more-plugins/indent2em.php),和其他类似，新建index.js ```require('./plugin.js');```,然后在配置项的plugins和toolbar添加‘indent2em’
-
+* 多图片上传：
+  下载powerpaste [保留版本](/plugins/powerpaste)
+  
+  修改plugin.js里的iframe1
+  
+  images_upload_handler中blobInfo参数和单张图片上传会有所不一样 ```const name=typeof(blobInfo.filename)==='function'?blobInfo.filename():blobInfo.file.name```
 
 ![](/assets/tinymce.png)
 
@@ -19,6 +52,7 @@ npm install --save @tinymce/tinymce-vue
 ```
 /* eslint-disable no-unused-vars */
 import tinymce from 'tinymce'
+// import  'tinymce'
 import 'tinymce/themes/silver/theme'
 import editor from '@tinymce/tinymce-vue'
 import 'tinymce/plugins/image'
@@ -28,32 +62,41 @@ import 'tinymce/plugins/textcolor'
 import 'tinymce/plugins/colorpicker'
 import 'tinymce/plugins/preview'
 import 'tinymce/plugins/table'
-import uploadFileApi from '../api/upload-file'
+import 'tinymce/plugins/indent2em'
+import 'tinymce/plugins/lineheight'
+import 'tinymce/plugins/axupimgs'
+import uploadFileApi from '../api/base/attach'
 
-const UPLOAD_URL = 'uploadFile'
+const UPLOAD_URL = '/attach/public'
 
 const EDITOR_CONFIG = {
-    language_url: '/tinymce/zh_CN.js',
+    base_url: './tinymce',
+    language_url: './tinymce/zh_CN.js',
     language: 'zh_CN',
     // skin_url: '/public/tinymce/skins/lightgray',
-    skin_url: '/tinymce/skins/ui/oxide',
-    height: 300,
-    plugins: 'link lists image table colorpicker textcolor preview',
+    skin_url: './tinymce/skins/ui/oxide',
+    height: 600,
+    plugins: 'link lists image table colorpicker textcolor preview indent2em lineheight axupimgs',
     // plugins: 'link lists table colorpicker textcolor preview',
     external_plugins: {
-        'powerpaste': '/tinymce/powerpaste/plugin.min.js' //复制图片相关
+        // 'powerpaste': '/tinymce/powerpaste/plugin.min.js' //复制图片相关
+        'powerpaste': './powerpaste/plugin.min.js' //复制图片相关
     },
     menubar: false,
-    forced_root_block: 'p',
-    toolbar: `formatselect fontsizeselect |
-           bold italic underline strikethrough |
-           forecolor backcolor |
-           alignleft aligncenter alignright alignjustify |
-           bullist numlist |
-           outdent indent blockquote |
-           undo redo |
-           link unlink table image |
+    forced_root_block: 'wrap',
+    toolbar_mode:'sliding',
+    toolbar: `fontselect fontsizeselect lineheight | 
+           bold italic underline strikethrough | 
+           forecolor backcolor | 
+           alignleft aligncenter alignright alignjustify | 
+           bullist numlist | 
+           indent2em outdent indent blockquote | 
+           undo redo | 
+           link unlink table image axupimgs| 
            removeformat preview `,
+    /*toolbar: 'code undo redo restoredraft | cut copy paste pastetext | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent | \
+    styleselect formatselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | \
+    table image media charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs',*/
     font_formats: `
           微软雅黑=Microsoft YaHei;
           宋体=SimSun;
@@ -69,11 +112,11 @@ const EDITOR_CONFIG = {
 
     // CONFIG: Paste
     paste_retain_style_properties: 'all',
-    paste_word_valid_elements: '*[*]', // word需要它
-    paste_data_images: true, // 粘贴的同时能把内容里的图片自动上传，但Chrome中无效
-    paste_convert_word_fake_lists: false, // 插入word文档需要该属性
-    paste_webkit_styles: 'all',
-    paste_merge_formats: true,
+    paste_word_valid_elements: '*[*]', // 允许指定元素和属性保存在过滤结果中,word需要它
+    paste_data_images: true, // 从粘贴的内容中删除data:url图像（内联图像）,粘贴的同时能把内容里的图片自动上传
+    paste_convert_word_fake_lists: false, // 禁用复制word中的列表内容时，转换为html的UL或OL格式
+    paste_webkit_styles: 'all', //指定在WebKit中粘贴时要保留的样式
+    paste_merge_formats: true, //合并相似格式
     nonbreaking_force_tab: false,
     paste_auto_cleanup_on_paste: false,
 
@@ -82,7 +125,6 @@ const EDITOR_CONFIG = {
     *                         { padding:0; margin:0; }
     html, body                { height:100%; }
     img                       { max-width:100%;}
-    a                         { text-decoration: none; }
     iframe                    { width: 100%; }
     p                         { margin: 0px;  }
     table                     { word-wrap:break-word; word-break:break-all; max-width:100%; border:none; border-color:#999; }
@@ -90,28 +132,45 @@ const EDITOR_CONFIG = {
     ul,ol                     { list-style-position:inside; }
     `,
     images_upload_url: UPLOAD_URL, // 图片上传路径，不能删除，否则不能显示本地上传按钮
-    // 自定义图片上传
-    images_upload_handler: function (blobInfo, success, failure) {
+    // 自定义多图片上传
+   /* images_upload_handler: function (blobInfo, success, failure) {
         let formData = new FormData()
-        formData.append('file', blobInfo.blob(),blobInfo.filename())
+        // formData.append('file', blobInfo.blob())
+        formData.append('upload', blobInfo.blob())
+        formData.append('siteCode', this.websiteCode)
         uploadFileApi.add(formData).then((res) => {
                 success(res.data.url)
             }
         ).catch(() => {
             failure('发生错误,请稍后再试')
         })
-    }
-    /* setup: function (editor) {
-      editor.on('change', function () {
-        editor.save()
-      })
-    } */
+    },*/
+
+    // 粘贴前回调
+    /*paste_preprocess:function (plugin, args) {
+        console.log(plugin)
+        console.log(args.content)
+    }*/
+    setup : function(ed)
+    {
+        /*ed.on('change', function () {
+            ed.save()
+        })*/
+        ed.on('init', function()
+        {
+            this.execCommand("fontSize", false, "14px");
+        });
+    },
 }
 
 export default {
     mixins: [],
     extends: {},
-    props: {},
+    props: {
+        websiteCode: {
+            type: String
+        }
+    },
     data () {
         return {
             linkList: [
@@ -124,7 +183,7 @@ export default {
                     value: 0
                 }
             ],
-            editorInit: EDITOR_CONFIG
+            editorInit: null
         }
     },
     computed: {},
@@ -133,10 +192,26 @@ export default {
     },
     watch: {},
     methods: {
+        initEditor () {
+            const websiteCode = this.websiteCode
+            EDITOR_CONFIG.images_upload_handler = function (blobInfo, success, failure) {
+                let formData = new FormData()
+                const name=typeof(blobInfo.filename)==='function'?blobInfo.filename():blobInfo.file.name
+                formData.append('upload', blobInfo.blob(), name)
+                formData.append('siteCode', websiteCode)
+                uploadFileApi.add(formData).then((res) => {
+                    success(res.data.url)
+                }).catch(() => {
+                    failure('发生错误,请稍后再试')
+                })
+            }
+            this.editorInit = EDITOR_CONFIG
+        }
     },
     beforeCreate () {
     },
     mounted () {
+        this.initEditor()
     }
 }
 
@@ -170,8 +245,12 @@ export default {
           Wingdings=wingdings,zapf dingbats`,
 * */
 
+
 ```
 
 ```
  <editor v-model="article.content" :init="editorInit"></editor>
 ```
+
+
+
