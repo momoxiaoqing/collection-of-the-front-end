@@ -153,7 +153,7 @@ for...of ：ES6中引入，IE不支持，遍历可迭代对象定义的迭代值
 for each of ：是E4X(ECMAScript for XML)的一部分，被禁用，可用for...in代替
 
 forEach()：ES5，IE9+，对数组的每个元素执行一次提供的函数，遍历的范围在第一次调用 callback 前就会确定； 没有办法中止或者跳出 forEach() 循环，除了抛出一个异常
-```js
+```
    arr.forEach(callback[, thisArg]);
    // callback=function(){currentValue[,index,array]}
    // currentValue:数组中正在处理的当前元素
@@ -163,7 +163,7 @@ forEach()：ES5，IE9+，对数组的每个元素执行一次提供的函数，�
 
 
 for...in && for...of区别：
-```js
+```
    Object.prototype.objCustom = function() {};
 
    Array.prototype.arrCustom = function() {};

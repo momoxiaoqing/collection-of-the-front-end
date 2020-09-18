@@ -1,6 +1,6 @@
 ### axios.config.js
 
-```js
+```
 import router from 'vue-router'
 import axios from 'axios'
 import {Message} from 'element-ui'
@@ -106,7 +106,7 @@ export default axios
 
 ### main.js
 
-```js
+```
 import axios from './api/axios.config'
 
 Vue.prototype.axios = axios

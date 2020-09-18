@@ -6,13 +6,13 @@
 
 1、传递字符串：
 
-```js
+```
 <Welcome name="Tony"></Welcome>
 ```
 
 2、传递变量
 
-```js
+```
 const user = {
     name: 'Tony'
 };

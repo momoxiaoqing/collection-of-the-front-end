@@ -1,6 +1,6 @@
 ### 排序：
 
-```js
+```
 Sequelize.findAll({
             where: {...},
             order: [
@@ -12,7 +12,7 @@ Sequelize.findAll({
 
 ### update
 
-```js
+```
  //单条update
  typeModel.findById(id)
             .then(function (result){
@@ -30,7 +30,7 @@ Sequelize.findAll({
 
 ### $like，分页
 
-```js
+```
  typeModel.findAll({
             where: {
                  name:{
@@ -46,7 +46,7 @@ Sequelize.findAll({
 
 ### 格式化时间
 
-```js
+```
 var Article = sequelize.define('article',{
     id:{ type: Sequelize.INTEGER, primaryKey: true},
     publishTime:{type:Sequelize.DATE,field:'publish_time',

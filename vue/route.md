@@ -1,6 +1,6 @@
 ### 路由嵌套
 
-```js
+```
       {
             path: '/survey/:surveyId/paper',
             name: 'paper',

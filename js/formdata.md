@@ -14,7 +14,7 @@
 
 ### 3、创建FormData对象：
 
-```js
+```
 var formData = new FormData();
 //通过html创建
 var formData = new FormData(someFormElement);
@@ -26,7 +26,7 @@ formData.append("username", "Groucho");
 
 ### 4、常用方法：
 
-```js
+```
 FormData.append()
 FormData.delete()
 FormData.get()

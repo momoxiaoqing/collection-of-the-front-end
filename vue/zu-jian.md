@@ -62,7 +62,7 @@ export default {
 
 Article.vue:
 
-```js
+```
 <template>
   <div>
     {{article.title}}
@@ -90,7 +90,7 @@ Article.vue:
 
 1、data定义局部变量，其值为prop，不是引用复制
 
-```js
+```
 props: ['initialCounter'],
 data: function () {
   return { counter: this.initialCounter }   //counter不会随着initialCounter 的变化而变化

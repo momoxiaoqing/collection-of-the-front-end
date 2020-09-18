@@ -33,7 +33,8 @@
   * es6
      * [箭头函数](js/es6/arrow-function.md)
      * [super](js/es6/super.md)
-* [各种兼容性汇总](jian-rong-xing.md)
+* 兼容性
+  * [各种兼容性汇总](compatibility/jian-rong-xing.md)
   * [兼容问题记录](compatibility/compatibility.md)
 * [图片](picture.md)
   * [显示](picture/xian-shi.md)

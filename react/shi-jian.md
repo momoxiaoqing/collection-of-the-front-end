@@ -4,7 +4,7 @@
 
 2、语法：
 
-```js
+```
 <button onClick={activateLasers}>
   Activate Lasers
 </button>
@@ -12,7 +12,7 @@
 
 3、不能返回false 来阻止默认行为，必须用preventDefault
 
-```js
+```
 function handleClick(e) {
     e.preventDefault();
     console.log('The link was clicked.');
@@ -35,7 +35,7 @@ function handleClick(e) {
 
 复杂点说，带括号的是把返回值赋值给事件，不带括号的是把函数体所在地址位置赋值给事件。
 
-```js
+```
 <!DOCTYPE html>
 <html>
 <head>

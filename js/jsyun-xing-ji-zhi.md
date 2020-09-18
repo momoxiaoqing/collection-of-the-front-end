@@ -8,7 +8,7 @@ js执行每次都是先执行一遍当前队列中的所有宏任务，再执行
 
 例子：
 
-```js
+```
 console.log('1');
 
 setTimeout(function () {

@@ -19,7 +19,7 @@ axios.delete(url[, config])
 
 
 #### 3、多个请求 await                     
-```js
+```
 axios.all(iterable)
 axios.spread(callback)
 ```

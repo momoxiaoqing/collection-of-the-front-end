@@ -2,7 +2,7 @@
 
 ### 项目内使用2个模板
 
-```js
+```
 //.html引用art模板，.ejs引用ejs模板
 //如res.render('index.html'）引用art模板，res.render('index.ejs'）引用ejs模板，
 app.engine('html', require('express-art-template'));

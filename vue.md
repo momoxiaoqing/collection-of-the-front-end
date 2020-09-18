@@ -17,7 +17,7 @@
 
 assets和static文件夹中图片均可放：
 
-```js
+```
 <template>
     <div>
         <h1>{{ss}}</h1>
@@ -57,7 +57,7 @@ assets和static文件夹中图片均可放：
 
 添加注释：
 
-```js
+```
 /* eslint-disable no-unused-vars */
 let test = 1
 ```
