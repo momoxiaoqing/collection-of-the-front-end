@@ -137,7 +137,7 @@ if(name === undefined) {
 
 3、声明顺序
 
-```js
+```
 //结构性属性：
 display
 position, left, top, right etc.

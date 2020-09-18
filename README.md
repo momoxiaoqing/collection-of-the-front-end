@@ -2,6 +2,11 @@
 
 记录在前端开发过程中的一些坑，留以备用。
 
+### [html](html.md)
+* [video](html/video.md)
+* [iframe](html/iframe.md)
+  
+  
 ### [css](css.md)
 * [盒子模型](/css/box-model.md)
 * [BFC](/css/BFC.md)
@@ -21,12 +26,12 @@
 * [super](js/es6/super.md)
 * [文件下载](js/file-download.md)
 
-### [兼容问题](compatibility.md)
+### [兼容问题](compatibility/compatibility.md)
 
 ### map
 * [高德amap](map/gaode.md)
 
-### [图片处理](tu-pian-chu-li.md)
+### [图片处理](picture.md)
 * [显示](/tu-pian-chu-li/xian-shi.md)
 * [FormData](/tu-pian-chu-li/formdata.md)
 
@@ -61,6 +66,9 @@
 ### 工具相关
 * [webstorm](/tools/webstorm.md)
 * [nginx](/tools/nginx.md)
+* [Linux](/tools/linux.md)
+* [git](/tools/git.md)
 * [DNS](/tools/dns.md)
+* [cmd](/tools/cmd.md)
 
 

@@ -57,7 +57,7 @@ FormData.values()
 ```
 
 vue:
-```js
+```
 var target=document.getElementById('img-form');
 var data = new FormData(target);
 axios.post('/attach/upload',data).then(function (res1) {
