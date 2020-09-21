@@ -57,7 +57,6 @@ npm install --save @tinymce/tinymce-vue
 ```
 /* eslint-disable no-unused-vars */
 import tinymce from 'tinymce'
-// import  'tinymce'
 import 'tinymce/themes/silver/theme'
 import editor from '@tinymce/tinymce-vue'
 import 'tinymce/plugins/image'
@@ -88,17 +87,18 @@ const EDITOR_CONFIG = {
         'powerpaste': './powerpaste/plugin.min.js' //复制图片相关
     },
     menubar: false,
-    forced_root_block: 'wrap',
+    // forced_root_block: 'wrap',
+    forced_root_block: 'p',
     toolbar_mode:'sliding',
     toolbar: `fontselect fontsizeselect lineheight | 
            bold italic underline strikethrough | 
-           forecolor backcolor | 
+           removeformat forecolor backcolor | 
            alignleft aligncenter alignright alignjustify | 
            bullist numlist | 
            indent2em outdent indent blockquote | 
            undo redo | 
            link unlink table image axupimgs| 
-           removeformat preview `,
+           preview `,
     /*toolbar: 'code undo redo restoredraft | cut copy paste pastetext | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent | \
     styleselect formatselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | \
     table image media charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs',*/
@@ -249,8 +249,6 @@ export default {
           Webdings=webdings;
           Wingdings=wingdings,zapf dingbats`,
 * */
-
-
 ```
 
 ```

@@ -4,9 +4,12 @@
 ```
 
 #### 获取iframe内容
+需要同域状态下才能获取到内容
 ```
 document.getElementsByTagName('iframe')[0].contentDocument.body.innerHTML
+
 frames['iframe1'].document.body.innerHTML
+
 document.getElementById('id').contentWindow.document.body.innerHTML
 ```
 
