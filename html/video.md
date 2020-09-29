@@ -1,27 +1,40 @@
 ### video
 #### 视频自动播放
-```
+```html
 <div class="video-div">
     <video id="play" controls autoplay="autoplay" preload="auto">
         <source src="video/1.mp4" type="video/mp4">
         抱歉，您的浏览器不支持内嵌视频
     </video>
 </div>
-
-<script>
-   window.onload = function () {
-          var player = document.getElementById('play');
-          var playPromise = player.play() || Promise.reject('');
-          playPromise.then(function(){
-              // Video could be autoplayed, do nothing.
-          }).catch(function () {
-              // Video couldn't be autoplayed because of autoplay policy. Mute it and play.
-              player.muted = true;
-              player.play();
-          });
-    }
-</script>
 ```
+1、浏览器支持则自动播放，不支持则静音播放
+```javascript
+window.onload = function () {
+       var player = document.getElementById('play');
+       var playPromise = player.play() || Promise.reject('');
+       playPromise.then(function(){
+           // Video could be autoplayed, do nothing.
+       }).catch(function () {
+           // Video couldn't be autoplayed because of autoplay policy. Mute it and play.
+           player.muted = true;
+           player.play();
+       });
+ }
+```
+
+2、通过用户交互来打开音乐
+```javascript
+window.onload=function () {
+        var player=document.getElementById('play');
+        document.body.addEventListener('mousedown', function(){
+            player.muted=false
+        })
+}
+```
+3、换浏览器
+360、IE都可以自动播放
+
 
 #### video/audio兼容性
 [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats)
