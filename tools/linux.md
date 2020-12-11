@@ -8,7 +8,7 @@ du index-back.jpg -ah
 du -h --max-depth=1 user  // 查看user文件夹下的子目录大小；-h：以K，M，G为单位，提高信息的可读性。
 du -sh user  //查看user文件夹的大小
  ```
-
+slkj@Idx365.com
 #### 查找
 ```
 sudo find / -name nginx*  //查找nginx
@@ -31,7 +31,7 @@ grep -v test *test* // 反向查找，查找文件名中包含 test 的文件中
 slkj     25289 25144  0 20:38 pts/0    00:00:00 grep tomcat
 ```
 
-##### 启动和关闭
+##### tomcat启动和关闭
 
 在/usr/local/tomcat/bin目录下，开启：`./startup.sh`，关闭：`./startup.sh`
 
@@ -55,3 +55,17 @@ Unable to read PID file. Start aborted.
 * 查看最近50行日志：`tail -n 50 -f catalina.out`
 * 查看文件大小：`du -h catalina.out`
 * 清除日志：`> catalina.out`
+
+#### nginx 
+##### 查看nginx是否开启：`ps -ef|grep tomcat`
+##### 启动
+`nginx -c /etc/nginx/nginx.conf`
+
+若报错:
+```
+nginx: [alert] could not open error log file: open() "/var/log/nginx/error.log" failed (13: Permission denied)
+2020/12/04 11:18:52 [warn] 17220#0: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /etc/nginx/nginx.conf:5
+2020/12/04 11:18:52 [emerg] 17220#0: mkdir() "/var/lib/nginx/tmp/client_body" failed (13: Permission denied)
+```
+加sudo
+

@@ -14,7 +14,7 @@
 
 #### 切换分支
 ```
-git branch -a    //查看远程分支
+git branch -a    //查看全部分支（含远程）
 git branch      //查看本地分支
 git checkout master   //切换到master分支
 ```

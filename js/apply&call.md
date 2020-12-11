@@ -1,4 +1,5 @@
 ### apply
+this 指向第一个参数
 ```
 var obj = {
     name : 'linxin'
@@ -46,7 +47,13 @@ person.getname();       // linxin
 
 apply、call 方法都会使函数立即执行
 
-### call & bind 区别
+### apply & call & bind 区别
+####  1、apply & call 区别：
+方法传递的参数不同
+```javascript
+foo.call(this, arg1, arg2, arg3) == foo.apply(this, arguments) == this.foo(arg1, arg2, arg3);
+```
+
 
 在 EcmaScript5 中扩展了叫 bind 的方法，在低版本的 IE 中不兼容。它和 call 很相似，接受的参数有两部分，第一个参数是是作为函数上下文的对象，第二部分参数是个列表，可以接受多个参数。
 
