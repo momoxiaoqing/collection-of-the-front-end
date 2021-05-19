@@ -17,7 +17,7 @@ client_max_body_size 20m;
 ```
 
 #### Linux操作
-##### 查看nginx是否开启：`ps -ef|grep tomcat`
+##### 查看nginx是否开启：`ps -ef|grep nginx`
 ##### 启动
 `nginx -c /etc/nginx/nginx.conf`
 

@@ -3,6 +3,9 @@
 #### 查看地址
 `git remote -v`
 
+### 修改git用户名
+`git config --global user.name "username"`
+
 #### 删除已追踪文件
 删除.idea文件
 `git rm -r --cached .idea/ `

@@ -92,3 +92,5 @@ js里面有宏任务（macrotask）和微任务（microtask）。
 * 此时 setTimeout 被推进到 macrotask 队列中， promise.then 回调被推进到 microtask 队列中；
 * 由于在第一步中已经执行完了第一个 macrotask ，所以接下来会顺序执行所有的 microtask，也就是 promise.then 的回调函数，从而打印出 5；
 * microtask 队列中的任务已经执行完毕，继续执行剩下的 macrotask 队列中的任务，也就是 setTimeout，所以打印出 4。
+
+

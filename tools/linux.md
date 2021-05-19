@@ -33,7 +33,7 @@ slkj     25289 25144  0 20:38 pts/0    00:00:00 grep tomcat
 
 ##### tomcat启动和关闭
 
-在/usr/local/tomcat/bin目录下，开启：`./startup.sh`，关闭：`./startup.sh`
+在/usr/local/tomcat/bin目录下，开启：`./startup.sh`，关闭：`./shutdown.sh`
 
 注意：
 1、启动时报错：
@@ -57,7 +57,7 @@ Unable to read PID file. Start aborted.
 * 清除日志：`> catalina.out`
 
 #### nginx 
-##### 查看nginx是否开启：`ps -ef|grep tomcat`
+##### 查看nginx是否开启：`ps -ef|grep nginx`
 ##### 启动
 `nginx -c /etc/nginx/nginx.conf`
 

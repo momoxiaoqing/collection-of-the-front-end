@@ -104,6 +104,9 @@ ps：super 关键字指代父类的实例，即父类的 this 对象。在子类
 * JavaScript 设计模式[12]
 * 深入 javascript——构造函数和原型对象[13]
 
+#### common.js/es6模块化方案的不同？
+
+
 
 
 

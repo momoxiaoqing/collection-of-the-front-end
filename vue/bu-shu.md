@@ -27,6 +27,21 @@ build:{
 }
 ```
 
+#### 3、element-icons.woff文件404
+在build/utils文件中添加  publicPath:'../../'
+```
+  if (options.extract) {
+      return ExtractTextPlugin.extract({
+        use: loaders,
+        fallback: 'vue-style-loader',
+        publicPath:'../../'   // 添加
+      })
+    } else {
+      return ['vue-style-loader'].concat(loaders)
+    }
+```
+
+
 vue/cli 3没有这个问题，已无config中已无build，无需修改
 
 ### Vue CLI 3版本
