@@ -59,6 +59,7 @@
   * [axios配置](vue/axiospei-zhi.md)
   * [vue2-better-scroll](vue/vue2-better-scroll.md)
   * [tinymce富文本](vue/tinymcefu-wen-ben.md)
+  * [vue3](vue/vue3.md)
 * [react](react.md)
   * [组件](react/zu-jian.md)
   * [生命周期](react/sheng-ming-zhou-qi.md)
