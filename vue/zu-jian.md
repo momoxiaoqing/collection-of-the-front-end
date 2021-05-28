@@ -1,89 +1,62 @@
 ### prop父子组件间数据交互
+* 组件的调用顺序都是先父后子
+* 渲染完成的顺序是先子后父
+* 组件的销毁操作是先父后子
+* 销毁完成的顺序是先子后父
 
-parent：
+1、父子组件通信
 
+* 父->子props；子（emit）->父（on）
+* 获取父子组件实例 $parent / $children 如：直接在子组件的methods方法里面写：this.$parent.show()//show为父组件中定义的方法
+* Ref (如果在普通的 DOM 元素上使用，引用指向的就是 DOM 元素；如果用在子组件上，引用就指向组件实例)，如在引入的子组件的标签上挂载一个： ref="comA"，然后在方法中或者子组件的数据，this.$refs.comA.titles
+* Provide、inject 官方不推荐使用，但是写组件库时很常用
+
+2、兄弟组件通信
+
+* Event Bus 实现跨组件通信: Vue.prototype.$bus = new Vue()
+* Vuex
 ```
-<template>
- <!-- <dynamics-list></dynamics-list>-->
-  <div>
-    <div v-for="(item,index) in dynamicsList" :key="index">
-      <div v-if="item.publish_time">
-       <!-- 以下表示把一个对象的所有属性作为 prop 进行传递-->
-       <!-- <article-item v-bind="item" ></article-item>-->
-       <!-- 等价于：-->
-       <!-- <article-item :id="item.id" 
-                          :title="item.title" 
-                          :summary="item.summary" 
-                          :publish_time="item.publish_time" ></article-item>-->
+// 在main.js中把实例化的vue对象放在vue的原型上
+Vue.prototype.$bus = new Vue() 
+// 新建bus文件,再引用也可以：
+// import Vue from 'vue'; export default new Vue();
 
-        <article-item :item="item" ></article-item>
-      </div>
-      <div v-else>
-        <dlog-item :item="item" ></dlog-item>
-      </div>
-    </div>
-  </div>
-</template>
-<script>
-import articleItem from '../components/base/Article'
-import dlogItem from '../components/base/Dlog'
-export default {
-  name: 'Home',
-  data () {
-    return {
-      dynamicsList: [
-        {
-          id: 0,
-          title: 'test1',
-          summary: '这是一个文章。。。。。。',
-          publish_time: '2018-02-27'
-        },
-        {
-          id: 1,
-          content: '这是一个dlog',
-          create_time: '2018-02-26'
-        }
-      ]
+// 子组件一
+methods:{
+    sendData(){
+        this.$bus.$emit("send",this.childOneData)
     }
-  },
-  components: {
-    // dynamicsList
-    articleItem,
-    dlogItem
-  }
 }
-</script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-</style>
+// 子组件二
+created(){
+    this.$bus.$on("send",(payload)=>{
+        console.log("来自兄弟组件的数据",payload)
+        this.msg = payload
+    })
+}
 ```
 
-Article.vue:
+3、跨级组件通信
+
+* Vuex
+* attrs,listeners
+* Provide、inject
+
+### 父组件监听到子组件的生命周期
+$emit触发：
+```
+// Parent.vue
+<Child @mounted="doSomething"/>
+
+// Child.vue
+mounted() {
+  this.$emit("mounted");
+}
+```
 
 ```
-<template>
-  <div>
-    {{article.title}}
-  </div>
-</template>
 
-<script>
-  export default {
-    name: 'Article',
-    props: ['item'],
-    data () {
-      return {
-        article: this.item
-      }
-    }
-  }
-</script>
-
-<style scoped>
-
-</style>
 ```
 
 ### prop传递的对象修改
@@ -109,6 +82,8 @@ computed: {
   }
 }
 ```
+
+
 
 
 
