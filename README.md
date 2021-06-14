@@ -18,7 +18,7 @@
   * [table的border问题](css/tablede-border-wen-ti.md)
 * [js](js.md)
   * [js运行机制](js/jsyun-xing-ji-zhi.md)
-  * [let&const&var](js/let&const&var.md)
+  * [let&const&var](js/es6/let&const&var.md)
   * [深拷贝&浅拷贝](js/shen-kao-8d1d26-qian-kao-bei.md)
   * [attribute&property](js/attribute&property.md)
   * [数组](js/array.md)
