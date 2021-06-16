@@ -42,6 +42,11 @@
 </div>
 ```
 
+注意：外边距折叠发生条件：
+* 都是普通流中的元素且属于同一个 BFC
+* 没有被 padding、border、clear 或非空内容隔开
+* 两个或两个以上垂直方向的「相邻元素」
+
 ### IFC
 内联格式化上下文（Inline Formatting Contexts）
 
