@@ -39,7 +39,10 @@
 * MutationObserver
 
 #### Event Loop 流程
+简略版：
 ![](/assets/js-brief.png)
+
+详细版：
 ![](/assets/js.jpg)
 
 注意：
