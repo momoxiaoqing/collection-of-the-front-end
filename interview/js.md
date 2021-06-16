@@ -1,4 +1,3 @@
-### js相关
 #### 数据类型
 8种数据类型：
 * Boolean
@@ -37,6 +36,32 @@
 * 创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。
 * 属性和方法被加入到 this 引用的对象中。
 * 新创建的对象由 this 所引用，并且最后隐式的返回 this 。
+
+#### 重排&重汇
+
+
+#### 强制缓存和协商缓存
+强缓存：浏览器直接从本地（先内存后硬盘）读取文件  
+header参数：
+* Expires：过期时间，如果设置了时间，则浏览器会在设置的时间内直接读取缓存，不再请求
+* Cache-Control：缓存设置
+    *  max-age：用来设置资源（representations）可以被缓存多长时间，单位为秒；
+    *  s-maxage：和max-age是一样的，不过它只针对代理服务器缓存而言；
+    * public：指示响应可被任何缓存区缓存；
+    * private：只能针对个人用户，而不能被代理服务器缓存；
+    * no-cache：强制客户端直接向服务器发送请求，向服务器评估缓存响应的有效性。若资源变更，返回新内容，否则返回304。
+    * no-store：禁止一切缓存（这个才是响应不被缓存的意思）。
+
+协商缓存：浏览器从服务器读取文件  
+Last-Modifed/If-Modified-Since和Etag/If-None-Match是分别成对出现的
+* Etag/If-None-Match
+    * Etag:Etag是属于HTTP 1.1属性，它是由服务器（Apache或者其他工具）生成返回给前端，用来帮助服务器控制Web端的缓存验证。
+           Apache中，ETag的值，默认是对文件的索引节（INode），大小（Size）和最后修改时间（MTime）进行Hash后得到的
+    * If-None-Match:当资源过期时，浏览器发现响应头里有Etag,则再次像服务器请求时带上请求头if-none-match(值是Etag的值)。服务器收到请求进行比对，决定返回200或304
+* Last-Modifed/If-Modified-Since
+    * Last-Modified：浏览器向服务器发送资源最后的修改时间
+    * If-Modified-Since：当资源过期时（浏览器判断Cache-Control标识的max-age过期），发现响应头具有Last-Modified声明，则再次向服务器请求时带上头if-modified-since，表示请求时间。服务器收到请求后发现有if-modified-since则与被请求资源的最后修改时间进行对比（Last-Modified）,若最后修改时间较新（大），说明资源又被改过，则返回最新资源，HTTP 200 OK;若最后修改时间较旧（小），说明资源无新修改，响应HTTP 304 走缓存。
+                       
 
 #### 有哪些性能优化的方法 ？
 1、内容优化
@@ -82,6 +107,21 @@
 * 不要在 HTML 中使用缩放图片
 * favicon.ico 要小而且可缓存
 
+es6相关
+---------
+* [箭头函数与普通函数的区别](../js/es6/arrow-function.md)
+
+####  for of & for in的区别
+* for in是遍历（object）键名，for of是遍历（array）键值
+* for...of是ES6新引入的特性,ie不支持
+* for...of不能循环object，需要通过和Object.keys()搭配使用
+```js
+for(var key of Object.keys(student)){
+    //使用Object.keys()方法获取对象key的数组
+    console.log(key+": "+student[key]);
+}
+```
+
 #### ES5 的继承和 ES6 的继承有什么区别 ？
  ES5 的继承时通过 prototype 或构造函数机制来实现。
 * ES5 的继承实质上是先创建子类的实例对象，然后再将父类的方法添加到 this 上（Parent.apply(this)）。
@@ -92,7 +132,7 @@
 ps：super 关键字指代父类的实例，即父类的 this 对象。在子类构造函数中，调用 super 后，才可使用 this 关键字，否则报错。
 
 #### 经典题
-* JS 是单线程，你了解其运行机制吗 ？[4]
+* JS 是单线程，你了解其运行机制吗 ？[参考](../js/jsyun-xing-ji-zhi.md)
 * 7 分钟理解 JS 的节流、防抖及使用场景[5]
 * JavaScript 常见的六种继承方式[6]
 * 九种跨域方式实现原理（完整版）[7]
