@@ -4,7 +4,7 @@
 * 加减disabled
 * 添加浮层比如loading图层防止多次点击
 
-### 节流 throttle
+### 节流 throttle 
 
 
 ### 防抖 debounce

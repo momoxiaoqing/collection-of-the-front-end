@@ -8,7 +8,7 @@ let fun = () => void doesNotReturn();
 
 #### 与普通函数的区别
 1. 更简短
-2. 本身没有this​​​​​​​，没有 prototype (原型)
+2. 本身没有this，没有 prototype (原型)
 3. 不绑定this，即：和函数外作用域一致，之后也不会改变
 4. call | apply | bind 无法改变箭头函数中this的指向
 5. 箭头函数不能作为构造函数使用
