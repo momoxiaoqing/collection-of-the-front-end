@@ -7,6 +7,7 @@
    Number
    String
    Symbol
+   BigInt
   ```
  * 对象类型 Object
 
@@ -172,12 +173,12 @@ for...in && for...of区别：
    iterable.foo = 'hello';
 
    for (let i in iterable) {
-     console.log(i); // logs 0, 1, 2, "foo", "arrCustom", "objCustom"
+     console.log(i); // 0, 1, 2, "foo", "arrCustom", "objCustom"
    }
 
    for (let i in iterable) {
      if (iterable.hasOwnProperty(i)) {
-       console.log(i); // logs 0, 1, 2, "foo"
+       console.log(i); // 0, 1, 2, "foo"
      }
    }
 

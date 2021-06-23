@@ -17,7 +17,6 @@
 * [js](js.md)
   * [js运行机制](js/jsyun-xing-ji-zhi.md)
   * [let&const&var](js/es6/let&const&var.md)
-  * [深拷贝&浅拷贝](js/shen-kao-8d1d26-qian-kao-bei.md)
   * [attribute&property](js/attribute&property.md)
   * [数组](js/array.md)
      * [判断是否数组](js/judge-array.md)

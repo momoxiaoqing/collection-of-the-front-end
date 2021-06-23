@@ -8,7 +8,7 @@ var obj = {
 function func(firstName, lastName){
     console.log(firstName + ' ' + this.name + ' ' + lastName);   //在浏览器中，this指向全局的 "window" 对象
 }
-
+ 
 func.apply(obj, ['A', 'B']);    // A linxin B
 ```
 
@@ -27,7 +27,6 @@ func.call(obj, 'C', 'D');       // C linxin D
 
 ### apply 和 call作用
 * 改变 this 指向
-
 * 借用别的对象的方法（实现继承）
 ```
 var Person1  = function () {
@@ -43,8 +42,7 @@ var person = new Person2();
 person.getname();       // linxin
 ```
 
-* 调用函数
-
+* 调用函数  
 apply、call 方法都会使函数立即执行
 
 ### apply & call & bind 区别
@@ -76,8 +74,7 @@ func1();                        // linxin
 var obj=func.call(obj);         // linxin
 
 ```
-因为bind返回的是函数，所以不会和call一样立即执行。
-
+因为bind返回的是函数，所以不会和call一样立即执行。  
 * 参数的使用
 ```
 function func(a, b, c) {
@@ -91,12 +88,8 @@ func1('B', 'C');                // linxin B C
 func.call(null, 'linxin');      // linxin undefined undefined
 ```
 
-* 浏览器兼容性
-
-IE9以后不支持bind
-
-apply:ECMAScript 3rd Edition
-
-call:ECMAScript 1st Edition
-
+* 浏览器兼容性  
+IE9以后不支持bind  
+apply:ECMAScript 3rd Edition  
+call:ECMAScript 1st Edition  
 bind:EcmaScript5

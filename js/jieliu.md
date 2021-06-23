@@ -4,9 +4,6 @@
 * 加减disabled
 * 添加浮层比如loading图层防止多次点击
 
-### 节流 throttle 
-
-
 ### 防抖 debounce
 把多个信号合并为一个信号，利用setTimeout;
 
