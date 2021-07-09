@@ -18,6 +18,11 @@
 ```
 <input v-bind:value="something" v-on:input="something = $event.target.value">
 ```
+### Proxy和Object.defineProperty的区别
+* proxy可以直接监听对象而非属性
+* proxy拦截方法较多，如：has,apply,construct,ownkeys
+* proxy返回值为对象实例，而object.property只能遍历对象属性直接修改
+
 
 ### keep-alive 实现列表缓存
 props:

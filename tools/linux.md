@@ -49,12 +49,13 @@ Unable to read PID file. Start aborted.
 3、接口504，重启nginx
 
 ##### 日志相关
-日志在log/catalina.out
+用`nginx -t`查看日志地址，日志在log/catalina.out
 
 * 从尾部查看：`tail -f catalina.out`
 * 查看最近50行日志：`tail -n 50 -f catalina.out`
 * 查看文件大小：`du -h catalina.out`
 * 清除日志：`> catalina.out`
+
 
 #### nginx 
 ##### 查看nginx是否开启：`ps -ef|grep nginx`
@@ -69,3 +70,5 @@ nginx: [alert] could not open error log file: open() "/var/log/nginx/error.log" 
 ```
 加sudo
 
+##### 页面502
+香港服务器：注释请求来源解析

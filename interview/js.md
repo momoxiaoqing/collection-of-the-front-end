@@ -11,6 +11,31 @@
 
 未定义的值和定义未赋值的为 undefined，null 是一种特殊的 object，NaN 是一种特殊的 number。
 
+#### null && undefined 区别
+先有的null，表示"无"的值，被当成一个对象，数据类型不匹配时，往往是自动转换类型或者默默地失败，不容易发现错误，所以又设计了一个undefined  
+
+用法：
+* null：表示"没有对象"，即该处不应该有值
+    1. 作为函数的参数，表示该函数的参数不是对象 
+    2. 作为对象原型链的终点
+* undefined：表示"缺少值"，就是此处应该有一个值，但是还没有定义
+    1. 变量被声明了，但没有赋值
+    2. 调用函数时，应该提供的参数没有提供，该参数等于undefined
+    3. 对象没有赋值的属性，该属性的值为undefined
+    4. 函数没有返回值时，默认返回undefined
+    
+```js
+null == undefined  // true
+null !== undefined  //true
+typeof(null) === "object" //true
+typeof(undefined) === "undefined" //true
+
+Number(null) //0
+5 + null // 5
+Number(undefined) //NaN
+5+undefined //NaN
+```
+
 #### cookies，sessionStorage 和 localStorage 的区别
 共同点：都是保存在浏览器端，且同源的。
 
@@ -31,6 +56,14 @@
 * innerHTML 将内容写入某个 DOM 节点，不会导致页面全部重绘。
 * innerHTML 很多情况下都优于 document.write，其原因在于其允许更精确的控制要刷新页面的那一个部分。
 * document.write 是重写整个 document, 写入内容是字符串的 html；innerHTML 是 HTMLElement 的属性，是一个元素的内部 html 内容
+
+#### DOM绑定事件的几种方式及区别？
+*　标签上绑定：onClick="change" 
+* btn.onClick = function(){} //会覆盖
+* btn.addEventListener(type, handle, true) //true表示捕获，可以注册多个listener，不会覆盖
+
+#### typeof & instanceOf，如何判断数据类型
+typeof 可判断undefined, number, boolean, string, symbol, function且返回值为对应字符串；null, Array, object返回值为Object
 
 #### new 操作符具体干了什么呢 ?
 * 创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。

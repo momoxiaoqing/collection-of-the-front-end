@@ -29,6 +29,8 @@
 * setInterval
 * setImmediate ()-Node
 * requestAnimationFrame ()-浏览器
+* I/O
+* UI 交互事件（优先级较高） ()-浏览器
 
 #### 微任务
 * process.nextTick ()-Node
@@ -47,7 +49,7 @@
 
 注意：
 1. 宏任务 -> 微任务 -> GUI渲染 -> [宏任务 -> ...]
-2. 宏任务整体存入任务队列，不用马上拆分
+2. 每一个每一个task会从头到尾将这个任务执行完毕，不会执行其它，即：宏任务整体存入任务队列，不用马上拆分
 
 
 ###例子：
@@ -121,6 +123,57 @@ setTimeout(function () {                //timer2
 })
 
 // 1 7 6 8 2 4  3 5 9 11 10 12
+```
+
+```js
+setTimeout(function(){
+    console.log('定时器开始啦')
+});
+
+new Promise(function(resolve){
+    console.log('马上执行for循环啦');
+    for(var i = 0; i < 10000; i++){
+        i == 99 && resolve(); //相当于if(i==99)  resolve()
+    }
+}).then(function(){
+    console.log('执行then函数啦')
+});
+
+console.log('代码执行结束');
+```
+1. 整段代码作为宏任务执行，遇到setTimeout宏任务分配到宏任务Event Queue中
+2. 遇到promise内部为同步方法直接执行-“马上执行for循环啦”
+3. 注册then回调到Eventqueen
+4. 主代码宏任务执行完毕-“代码执行结束”
+5. 主代码宏任务结束被monitoring process进程监听到，主任务执行Event Queue的微任务
+6. 微任务执行完毕-“执行then函数啦”
+7. 执行宏任务console.log('定时器开始啦')
+
+```js
+async function async1() {
+  console.log(1);
+  const result = await async2();
+  console.log(3);
+}
+
+async function async2() {
+  console.log(2);
+}
+//console.log(async2())
+
+Promise.resolve().then(() => {
+  console.log(4);
+});
+
+setTimeout(() => {
+  console.log(5);
+});
+
+async1();
+console.log(6);
+
+// 1 2 6 4 3 5
+// console.log(3)其实是在async2函数返回的Promise的then语句中执行的
 ```
 
 
